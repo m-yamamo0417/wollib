@@ -1,0 +1,7 @@
+package com.myamamoto;
+
+public class MacAddress {
+    public MacAddress(String macAddress){
+	throw new NullPointerException();
+    }
+}

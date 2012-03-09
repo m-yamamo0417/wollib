@@ -1,4 +1,4 @@
-package com.myamamoto;
+package com.myamamoto.wakeonlan;
 
 import java.net.InetAddress;
 import java.net.DatagramPacket;

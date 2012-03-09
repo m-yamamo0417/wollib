@@ -1,4 +1,4 @@
-package com.myamamoto;
+package com.myamamoto.wakeonlan;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,4 +1,4 @@
-package com.myamamoto;
+package com.myamamoto.wakeonlan;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

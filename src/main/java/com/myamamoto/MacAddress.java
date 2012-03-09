@@ -14,6 +14,13 @@ public class MacAddress {
 	pattern = Pattern.compile(regex);
     }
 
+    public static boolean isValid(String macAddress) {
+	if(null == macAddress) {
+	    return false;
+	}
+	return MacAddress.pattern.matcher(macAddress).matches();
+    }
+
     private final String macAddress;
     private final byte[] bytes = new byte[6];
     

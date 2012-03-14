@@ -16,22 +16,32 @@
 
 package com.myamamoto.wakeonlan;
 
+import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
 
 public class MagicPacketClientTest {
 
+    private MagicPacketClient client;
+
+    @Before
+    public void setUp() {
+	this.client = new MagicPacketClient();
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void sendNull() {
+	this.client.send(null);
+    }
     
     @Test(expected=IllegalArgumentException.class)
     public void sendIllegalFormatMacAddress() {
-	MagicPacketClient client = new MagicPacketClient();
-	client.send("");
+	this.client.send("");
     }
 
     @Test
     public void testSend() {
-	MagicPacketClient client = new MagicPacketClient();
-	client.send("FF:FF:FF:FF:FF:FF");
+	this.client.send("FF:FF:FF:FF:FF:FF");
     }
 }

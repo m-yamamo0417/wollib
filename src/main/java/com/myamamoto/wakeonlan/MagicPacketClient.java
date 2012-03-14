@@ -24,6 +24,9 @@ import java.net.SocketException;
 public class MagicPacketClient {
 
     public void send(String macAddress) {
+	if(null == macAddress){
+	    throw new NullPointerException();
+	}
 	if(!MacAddress.isValid(macAddress)){
 	    throw new IllegalArgumentException();
 	}

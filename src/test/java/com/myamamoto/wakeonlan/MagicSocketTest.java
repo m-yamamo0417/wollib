@@ -16,21 +16,15 @@
 
 package com.myamamoto.wakeonlan;
 
-import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.SocketException;
+import org.junit.Before;
+import org.junit.Test;
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
 
-public class MagicPacketClient {
-
-    public void send(String macAddress) {
-	if(null == macAddress){
-	    throw new NullPointerException();
-	}
-	if(!MacAddress.isValid(macAddress)){
-	    throw new IllegalArgumentException();
-	}
-	MagicPacket packet = new MagicPacket(macAddress);
+public class MagicSocketTest {
+    @Test
+    public void testSend() {
+	MagicPacket packet = new MagicPacket("FF:FF:FF:FF:FF:FF");
 	MagicSocket socket = new MagicSocket();
 	socket.send(packet);
     }

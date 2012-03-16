@@ -1,6 +1,6 @@
 # -*- org -*-
 * wollib
-  wollib is a wake-on-lan libraly.
+  wollib is a wake-on-lan library.
 ** Usage
    you can send magic packet like this.
    new MagicPacketClient().send("01:23:45:67:89:AB");

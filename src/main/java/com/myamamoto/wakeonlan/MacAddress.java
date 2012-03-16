@@ -25,7 +25,7 @@ public class MacAddress {
     static {
 	String regex = "(\\p{XDigit}{2})";
 	for(int i = 0; i < 5; i++) {
-	    regex += ":(\\p{XDigit}{2})";
+	    regex += "[:-](\\p{XDigit}{2})";
 	}
 	pattern = Pattern.compile(regex);
     }

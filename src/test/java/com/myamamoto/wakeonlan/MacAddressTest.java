@@ -57,6 +57,8 @@ public class MacAddressTest {
     public void testIsValidTrue() {
 	String strAddr = "01:23:45:67:89:Ab";
 	assertThat(MacAddress.isValid(strAddr), is(true));
+	strAddr = "01-23-45-67-89-Ab";
+	assertThat(MacAddress.isValid(strAddr), is(true));
     }
 
     @Test
